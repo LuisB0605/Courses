@@ -1,0 +1,38 @@
+/* /Fondo de la página */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(87, 228, 230);
+  text-align: center; /* Centra el texto */
+}
+
+/* Estilo del título principal */
+
+h1 {
+  color: white;          
+  font-size: 3rem;
+  margin-top: 200px;
+}
+/* Estilo del párrafo */
+p {
+  color: #555;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+
+button {
+  background-color: #80f9c7;   /* Azul bonito */
+  color: white;                /* Texto blanco */
+  border: none;                /* Sin borde */
+  padding: 12px 24px;          /* Tamaño y espacio */
+  font-size: 18px;             /* Tamaño de texto */
+  border-radius: 50px;          /* Bordes redondeados */
+  cursor: pointer;             /* Cambia cursor al pasar */
+  transition: background-color 0.3s ease;
+  margin-top: 30px;            /* Espacio arriba */
+}
+
+button:hover {
+  background-color: rgb(185, 255, 185);  /* Azul más oscuro al pasar mouse */
+}
