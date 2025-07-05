@@ -13,12 +13,23 @@ html, body {
     padding: 20px;
 }
 
-h1 {
-    display: inline-block;
-}
-
 body {
     background-color: rgba(241, 71, 162, 0.565);
+    padding: 0 100px;
+}
+
+div#banner {
+  display: flex;                      /* Organiza en fila */
+  justify-content: center;           /* Centra el contenido horizontalmente */
+  align-items: center;               /* Centra el contenido verticalmente */
+  gap: 100px;                         /* Espacio entre los elementos */
+  background-color: #fff;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+
+div#img-banner{
 }
 
 table {
@@ -50,37 +61,26 @@ footer {
     text-align: center;
 }
 
-div {
-    float: right;
-    margin: 20px;
-    padding: 0px 200px;
-}
-
 </style>
 
 
 
 <body>
-    <h1>
-        <img 
-        width="100px" 
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDDgzwuG3XY9z_c7f3NiYF9pluEjd5fOkNeg&s" 
-        alt=""
-        />
-    
+    <div id="banner">
+        <div id="img-banner">
+            <img
+            width="100px" 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDDgzwuG3XY9z_c7f3NiYF9pluEjd5fOkNeg&s" 
+            alt=""
+            />
+        </div>
         <h1>Toy Poodle</h1>
-        <h1>
-            <div>
                 <img
                     width="40px"
                     src="data:image/png;base64,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" 
                     alt=""
-                />
-            </div>    
-
-        </p>
-
-    </h1>
+                /> 
+    </div>
     <hr>
     
     <p>Toy poodles are smaller versions of poodles, so they are smaller than the average dog. Toy poodles are a dog breed. Toy poodles are a fun pet but also a companion, they're extremely intelligent and like to perform to do tricks and fashion. Toy poodles possess strong swimming abilities, and swimming is a good exercise for them to keep their body fit.</p>
