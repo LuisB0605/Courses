@@ -36,12 +36,7 @@
       width: 150px;     
 
     }
-
-    div#status-mood {
-      height: 180px;
-      background-color: aliceblue;
-    }
-
+    
     div#status-mood h3{
       height: 25px;
       color: #fff;
@@ -86,7 +81,7 @@
     div#a {
       height: 100%;
       width: 100%;
-      background-color: rgb(219, 166, 219);
+      background-color: rgb(255, 255, 255);
       margin: 20px;
       margin-right: 5px;
     }
@@ -142,6 +137,33 @@
       margin-bottom: 5px;
     }
 
+    #status-mood table td {
+      background-color: transparent;
+      color: black;
+      font-weight: normal;
+      text-align: left;
+    }
+    
+    #status-mood thead#head th#name {
+      font-size: 16px;
+      padding: 5px;
+    }
+
+    #status-mood table td {
+      padding: 0;
+      padding-top: 10px;
+    }
+
+    #status-mood ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    #status-mood ul li {
+      margin-bottom: 5px;
+    }
+
   </style>
   <body>
     <div id="app">
@@ -179,19 +201,31 @@
             </tr>
           </tbody>
       </table>
-
-      <div >
-            </ul>
-              </div>
-                <div id="status-mood">
-                  <h3>Status and Mood</h3>
-                  <p><strong style="color: rgb(8, 8, 196);">Dustynn Cruise</strong> is in your extended network. <strong style="color: rgb(8, 8, 196);">Update</strong>.</p>
-                  <p><strong>Mood:</strong> horny :)</p>
-                  <hr>
-                  <p>View my friends' <strong style="color: rgb(8, 8, 196);">status updates</strong>.</p>
-              </div>
+      <br>
+      <div id="status-mood">
+        <table border="1" id="profile">
+          <thead id="head">
+            <tr>
+              <th colspan="2" id="name">
+                Status and Mood
+              </th>
+            </tr>
+          </thead>
+          <tbody id="status-body">
+            <tr>
+              <td>
+                <ul>
+                  <li><strong style="color: rgb(8, 8, 196);">Dustynn Cruise</strong> is in your extended network. <strong style="color: rgb(8, 8, 196);">Update</strong>.</li>
+                  <li><strong>Mood:</strong> horny :)</li>
+                  <li><hr style="border: 1px solid #8282825d; margin-top: 10px;"></li>
+                  <li>View my friends' <strong style="color: rgb(8, 8, 196);">status updates</strong>.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
               <br>
-
               <table border="1">
               <thead id="head">
                 <tr>
