@@ -1,63 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Space</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="app">
-      <!-- Navigation and Banner -->
-      <div id="banner">
-        <img src="images/outerspace.jpg" id="banner-img" />
-      </div>
-      <nav>
-        <div class="nav-link">Home</div>
-        <div class="nav-link">Browse</div>
-        <div class="nav-link">Search</div>
-        <div class="nav-link">Invite</div>
-        <div class="nav-link">Film</div>
-        <div class="nav-link">Mail</div>
-        <div class="nav-link">Blog</div>
-        <div class="nav-link">Favorites</div>
-        <div class="nav-link">Forum</div>
-        <div class="nav-link">Groups</div>
-        <div class="nav-link">Events</div>
-        <div class="nav-link">Videos</div>
-        <div class="nav-link">Music</div>
-        <div class="nav-link">Classifieds</div>
+      <div class="banner"></div>
+      
+      <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
+          <button class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+          </button>
+          </div>
+        </form>
       </nav>
-
-      <div class="row">
-        <div class="col-3">
-          <!-- Profile -->
-          <div class="border mb" id="profile">
-            <div id="user-profile">
-              <div class="sub-header">
-                <h1>Hello, Tom!</h1>
+      
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My Space</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="row justify-content-evenly">
+        <div class="col-xl-5 col-lg-6 col-md-4 col-12">
+          <div class="ms-container">
+            <div class="ms-header"><h1>Welcome, Tom!</h1></div>
+            <div class="row">
+              <div class="col-8">
+                <img class="img-fluid" src="images/LB.jpg" />
+                <table>
+                  <caption class="caption-top">
+                    <strong>View by:</strong>
+                  </caption>
+                  <tr>
+                    <td>Profile</td>
+                    <td>Pics</td>
+                    <td>Videos</td>
+                    <td>Blogs</td>
+                  </tr>
+                  <tr>
+                    <td>Comments</td>
+                    <td>Friends</td>
+                    <td>Groups</td>
+                  </tr>
+                </table>
               </div>
-              <div class="user-profile-content">
-                <div>
-                  <img id="user-img" src="images/tom.jpg" />
-                  <table>
-                    <caption>
-                      <strong>View by:</strong>
-                    </caption>
-                    <tr>
-                      <td>Profile</td>
-                      <td>Pics</td>
-                      <td>Videos</td>
-                      <td>Blogs</td>
-                    </tr>
-                    <tr>
-                      <td>Comments</td>
-                      <td>Friends</td>
-                      <td>Groups</td>
-                    </tr>
-                  </table>
-                </div>
-                <ul>
+              <div class="col-4">
+                <ul class="user-profile-options">
                   <li>Edit Profile</li>
                   <li>Account Setting</li>
                   <li>Add/Edit Photos</li>
@@ -67,27 +103,25 @@
                   <li>Manage Address Book</li>
                 </ul>
               </div>
-              <h6>My MySpace URL's: https://youtube.com/rickroll</h6>
             </div>
           </div>
-          <!-- Status and Mood -->
 
-          <div class="border status-mood mb" id="snm">
-            <div class="sub-header">
+          <div class="ms-container">
+            <div class="ms-header">
               <h1>Status and Mood</h1>
             </div>
-            <div class="status-mood-content">
+            <div class="p-2">
               <p>
-                <span class="emphasis">Tom</span> is in your network.
-                <span class="emphasis">Update</span>.
+                <strong>Tom</strong> is in your network.
+                <strong>Update</strong>.
               </p>
-              <p><strong>Mood:</strong> Happy 😄</p>
+              <p><strong>Mood:</strong> Happy 😊</p>
             </div>
           </div>
 
-          <div class="border my-mail mb">
-            <div class="sub-header">
-              <h1>My Mail</h1>
+          <div class="ms-container">
+            <div class="ms-header">
+              <h1 class="m-0">My Mail</h1>
             </div>
             <table class="mail-table">
               <tr>
@@ -101,21 +135,111 @@
             </table>
           </div>
         </div>
-        <div class="col-5" id="myspace-content">
-          <div class="youtube-container">
-            <iframe
-            height="100%"
-            width="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=VdwllWopq527vint"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+
+        <div class="col">
+          <!-- <img
+            src="https://i.pinimg.com/originals/47/15/c9/4715c9788b3f7cce7b045aed418e34bf.gif"
+            class="w-100"
+            height="120px"
+          />
+          <video
+            controls
+            src="media/In The End [Official HD Music Video] - Linkin Park.mp4"
+            type="video/mp4"
+            autoplay
+            muted
+            class="object-fit-fill"
+          ></video> -->
+          <div class="row mt-3">
+            <div class="col-8">
+              <h5>Feed</h5>
+              <div class="feed">
+                <div class="post row align-items-center">
+                  <div class="col-3">
+                    <img src="images/tom.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="col-9">
+                    <div class="post-content">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloremque facere perspiciatis perferendis hic. Rem aut
+                      recusandae enim, similique iusto adipisci.
+                    </div>
+                    <div class="post-timestamp">12:00:00 01/01/04</div>
+                  </div>
+                </div>
+
+                <div class="post row align-items-center">
+                  <div class="col-3">
+                    <img src="images/tom.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="col-9">
+                    <div class="post-content">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloremque facere perspiciatis perferendis hic. Rem aut
+                      recusandae enim, similique iusto adipisci.
+                    </div>
+                    <div class="post-timestamp">12:00:00 01/01/04</div>
+                  </div>
+                </div>
+
+                <div class="post row align-items-center">
+                  <div class="col-3">
+                    <img src="images/tom.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="col-9">
+                    <div class="post-content">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloremque facere perspiciatis perferendis hic. Rem aut
+                      recusandae enim, similique iusto adipisci.
+                    </div>
+                    <div class="post-timestamp">12:00:00 01/01/04</div>
+                  </div>
+                </div>
+
+                <div class="post row align-items-center">
+                  <div class="col-3">
+                    <img src="images/tom.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="col-9">
+                    <div class="post-content">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloremque facere perspiciatis perferendis hic. Rem aut
+                      recusandae enim, similique iusto adipisci.
+                    </div>
+                    <div class="post-timestamp">12:00:00 01/01/04</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <h5>Friends</h5>
+              <div class="friend-list row">
+                <div class="friend-icon">
+                  <img class="img-fluid" src="images/user.jpeg" alt="" />
+                </div>
+                <div class="friend-icon">
+                  <img class="img-fluid" src="images/user.jpeg" alt="" />
+                </div>
+                <div class="friend-icon">
+                  <img class="img-fluid" src="images/user.jpeg" alt="" />
+                </div>
+                <div class="friend-icon">
+                  <img class="img-fluid" src="images/user.jpeg" alt="" />
+                </div>
+                <div class="friend-icon">
+                  <img class="img-fluid" src="images/user.jpeg" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <footer class="text-center">My Space</footer>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

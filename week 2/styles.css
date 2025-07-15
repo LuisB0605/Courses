@@ -3,136 +3,73 @@
   --sub-bg-color: rgb(213, 232, 251);
 }
 
+html,
 body {
   background-color: rgb(233, 233, 233);
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0 10%;
+  padding: 0;
 }
 
-div#app {
-  height: 100%;
-  width: 100%;
-  background-color: white;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
-div#banner {
-  height: 150px;
-  background-color: blue;
-  padding: 30px;
-}
-
-img#banner-img {
-  height: 100%;
-  width: 100%;
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 10px;
-  width: auto;
-  background-color: var(--main-bg-color);
-}
-
-nav .nav-link {
-  color: #fff;
-  padding-right: 10px;
-  border-right: 2px solid black;
-}
-
-nav .nav-link:last-child {
-  border-right: 0;
-}
-
-div.col-3 {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  max-width: 25%;
-  margin: 20px;
-}
-
-div.col-5 {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  max-width: 60%;
-  margin: 20px;
-}
-
-div.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.mb {
-  margin-bottom: 20px;
-}
-
-.border {
-  border: 2px solid var(--main-bg-color);
-}
-
-div#profile {
+#app {
   display: inline-block;
-  height: 100%;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.box {
+  border: 1px solid blue;
+  height: auto;
+}
+
+.banner {
+  height: 120px;
+  background-color: rgb(0, 98, 255);
+}
+
+.ms-container {
   background-color: var(--sub-bg-color);
+  border: 1px solid var(--main-bg-color);
+  margin-bottom: 10px;
 }
 
-div.user-profile-content {
-  display: flex;
-}
-
-img#user-img {
-  height: 200px;
-  width: 200px;
-  background-color: bisque;
-}
-
-div.sub-header {
+.ms-header {
   background-color: var(--main-bg-color);
   color: #fff;
   text-align: center;
 }
 
-div.sub-header h1 {
-  margin-top: 0;
-}
-
-.user-profile-content ul {
+.user-profile-options {
   list-style-type: none;
+  font-size: 0.8rem;
   margin: 0 50px 0 0;
   padding: 0;
 }
 
-.user-profile-content li {
+.user-profile-options li {
   cursor: pointer;
   color: rgb(0, 115, 255);
   text-decoration: underline;
   margin: 5px 0;
 }
 
-#snm .sub-header h1 {
-  text-align: start;
-  margin-left: 20px;
-}
-
-.status-mood-content {
-  padding: 0 20px;
-}
-
-.emphasis {
-  color: blue;
-  font-weight: 800;
-}
-
 .mail-table {
   width: 100%;
-}
-
-.my-mail h1 {
   margin: 0;
+  padding: 0;
 }
 
 .mail-table td {
@@ -140,80 +77,36 @@ div.sub-header h1 {
   text-align: center;
   height: 50px;
   background-color: var(--sub-bg-color);
+  border: 1px solid var(--main-bg-color);
   color: var(--main-bg-color);
   font-weight: 800;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
-@media (max-width: 1962px) {
-  div.col-3 {
-    width: 30%;
-    max-width: 30%;
-  }
-
-  div.col-5 {
-    width: 55%;
-    max-width: 55%;
-  }
+.feed .post{
+  font-size: 0.8rem;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 960px) {
-  div.row {
-    flex: wrap;
-  }
-
-  div.col-3 {
-    flex: 1 0 100%;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  div.col-5 {
-    flex: 1 0 100%;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  div#banner {
-    height: 210px;
-    background-color: blue;
-    padding: 0;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .nav-link {
-    flex: 1 0 20%;
-    max-width: 21%;
-  }
+.post-timestamp{
+  text-align: right;
+  font-size: 0.6rem;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-@media (max-width: 576px) {
+video {
+  width: 100%;
+}
+
+.friend-icon{
+  margin: 10px;
+  width: 90px;
+  cursor: pointer;
+}
+
+@media (min-width: 962px) {
   body {
-    padding: 0;
-  }
-
-  div#banner {
-    height: 210px;
-    background-color: blue;
-    padding: 0;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .nav-link {
-    flex: 1 0 20%;
-    max-width: 21%;
-  }
-
-  div.col {
-    width: 100%;
-    max-width: 100%;
+    padding: 0 10%;
   }
 }
