@@ -1,6 +1,6 @@
-let number = 10;
+let sum = 0;
 
-for (let i = 1; i <= number; i++){
-    let result = number + i;   
-    console.log(number + "+" + i + "=" + result);
+for (let i = 0; i <= 10; i++){
+    sum += i;
 }
+console.log("the sum of numbers 1-10 is: ", sum);
