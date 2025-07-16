@@ -32,3 +32,34 @@ function calculate(num1, num2, operator){
 
 calculate(10, 5, '+');
 calculate(10, 0, 'm');
+
+
+function countUpto(n){
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    }
+}
+
+countUpto(4);
+
+
+function factorial(n){
+    let result = 1;
+
+    for (let i = 1; i <= n; i++){
+        result = result * i;
+    }
+    console.log(result);
+}
+
+factorial(3);
+
+function invert(num){
+    
+    let numInvert = num.toString().split('').reverse().join('');
+    
+  return parseInt(numInvert);
+}
+
+
+console.log(invert(54321));
