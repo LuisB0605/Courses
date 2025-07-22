@@ -1,5 +1,5 @@
 function isEven(number){
-    if (number % 2 === 0){
+    if (number % 2 == 0){
         console.log("Even");
     } else {
         console.log("Odd");
@@ -46,13 +46,15 @@ countUpto(4);
 function factorial(n){
     let result = 1;
 
-    for (let i = 1; i <= n; i++){
+    for (let i = n; i > 0; i++){
         result = result * i;
     }
     console.log(result);
 }
 
 factorial(3);
+
+
 
 function invert(num){
     
